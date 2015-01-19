@@ -1,0 +1,32 @@
+{
+  "name": "react-lifecycle",
+  "version": "1.0.0",
+  "description": "A ReactJS mixin for logging component lifecycle method call",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "bundle": "browserify example.js -t reactify -o example.bundle.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jasonslyvia/react-lifecycle.git"
+  },
+  "keywords": [
+    "react",
+    "mixin",
+    "lifecycle"
+  ],
+  "author": "jasonslyvia <jasonslyvia@gmail.com> (http://undefinedblog.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jasonslyvia/react-lifecycle/issues"
+  },
+  "homepage": "https://github.com/jasonslyvia/react-lifecycle",
+  "dependencies": {
+    "react": "^0.12.2"
+  },
+  "devDependencies": {
+    "browserify": "^8.1.1",
+    "reactify": "^0.17.1"
+  }
+}
