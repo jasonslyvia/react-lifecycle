@@ -9,8 +9,6 @@ var React = require('react/addons');
 var LifeCycle = require('react-lifecycle');
 
 var MyComponent = React.createClass({
-  displayName: 'MyComponent',
-
   mixins: [LifeCycle],
 
   render: function(){
@@ -19,24 +17,28 @@ var MyComponent = React.createClass({
   }
 });
 
-React.render(<MyComponent />, document.body);
-React.unmountComponentAtNode(document.body);
-React.render(<MyComponent />, document.body);
-React.render(<MyComponent />, document.body);
+React.render(<MyComponent />, document.body);  // 1
+React.unmountComponentAtNode(document.body);   // 2
+React.render(<MyComponent />, document.body);  // 3
+React.render(<MyComponent />, document.body);  // 4
 ```
 
 which produces the following output:
 
+    // 1
     getDefaultProps
     getInitialState
     componentWillMount
     render
     componentDidMount
+    // 2
     componentWillUnmount
+    // 3
     getInitialState
     componentWillMount
     render
     componentDidMount
+    // 4
     componentWillReceiveProps
     shouldComponentUpdate
     componentWillUpdate
