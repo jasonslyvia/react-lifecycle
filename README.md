@@ -34,6 +34,7 @@ which produces the following output:
     // 2
     componentWillUnmount
     // 3
+    getDefaultProps
     getInitialState
     componentWillMount
     render
